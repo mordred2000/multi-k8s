@@ -12,5 +12,5 @@ docker push mistyfo/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=mistyfo/multi-server:$SHA
-kubectl set image deployments/client-deployment server=mistyfo/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=mistyfo/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=mistyfo/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=mistyfo/multi-worker:$SHA
